@@ -1,13 +1,23 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+:root {
+  --clr-Light-Cyan: hsl(193, 38%, 86%);
+  --clr-Neon-Green: hsl(150, 100%, 66%);
+  --clr-Grayish-Blue: hsl(217, 19%, 38%);
+  --clr-Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --clr-Dark-Blue: hsl(218, 23%, 16%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  min-height: 100vh;
+  font-size: 28px;
+  font-family: "Manrope", sans-serif;
+  background-color: var(--clr-Dark-Blue);
+  display: grid;
+  place-content: center;
 }

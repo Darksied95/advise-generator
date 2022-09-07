@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import diceLogo from "./assets/icon-dice.svg";
+import mobileLogo from "./assets/pattern-divider-mobile.svg";
+import desktopLogo from "./assets/pattern-divider-desktop.svg";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <h1>ADVICE #117</h1>
+      <q>
+        It is easy to sit up and take notice, what's difficult is getting up and
+        taking action.
+      </q>
+      <img src={mobileLogo} alt={"divider"} className="mobile-logo divider" />
+      <img src={desktopLogo} alt={"divider"} className="desktop-logo divider" />
+      <div className="dice-icon-container">
+        <img src={diceLogo} alt="dice-icon" className="dice-icon" />
+      </div>
+    </main>
   );
 }
 

@@ -1,38 +1,61 @@
-.App {
+main {
+  background-color: var(--clr-Dark-Grayish-Blue);
+  padding: 1.5em 1em 3em;
+  border-radius: 10px;
+  width: 90vw;
+  max-width: 650px;
+  font-size: 1.7rem;
   text-align: center;
+  position: relative;
+}
+h1 {
+  color: var(--clr-Neon-Green);
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: 5px;
+  font-weight: normal;
+  margin-bottom: 1em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+q {
+  color: var(--clr-Light-Cyan);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+img {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+.divider {
+  margin-top: 1em;
+}
+.desktop-logo {
+  display: none;
+}
+.dice-icon-container {
+  background-color: var(--clr-Neon-Green);
+  width: fit-content;
+  padding: 0.7em;
+  border-radius: 50%;
+  position: absolute;
+  left: 40%;
+  top: 90%;
+  cursor: pointer;
+}
+.dice-icon-container:hover {
+  box-shadow: 5px 5px 18px hsl(150, 100%, 66%),
+    -5px -5px 18px hsl(150, 100%, 66%);
+}
+@media screen and (min-width: 655px) {
+  main {
+    font-size: 2.2rem;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .dice-icon-container {
+    left: 45%;
   }
-  to {
-    transform: rotate(360deg);
+  .desktop-logo {
+    display: block;
+  }
+  .mobile-logo {
+    display: none;
   }
 }
