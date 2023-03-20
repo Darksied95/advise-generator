@@ -8,12 +8,16 @@ function App() {
 
   function getAdvise() {
     const getRandomNumber = (() => Math.ceil(Math.random() * 224))()
+
     const adviceApi = `https://api.adviceslip.com/advice/${getRandomNumber}`;
+
     fetch(adviceApi)
       .then((response) => response.json())
       .then(({ slip }) => {
         if (!slip) {
+
           setData({ id: 0, advice: "" })
+
           return getAdvise()
         }
         setData(slip)
