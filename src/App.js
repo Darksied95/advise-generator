@@ -5,14 +5,20 @@ import desktopLogo from "./assets/pattern-divider-desktop.svg";
 import "./App.css";
 function App() {
   const [{ id, advice }, setData] = useState({});
-  // const [getAdvice, setGetAdvice] = useState(false);
 
   function getAdvise() {
-    const getRandomNumber = () => Math.ceil(Math.random() * 224);
-    const adviceApi = `https://api.adviceslip.com/advice/${getRandomNumber()}`;
+    const getRandomNumber = (() => Math.ceil(Math.random() * 224))()
+    const adviceApi = `https://api.adviceslip.com/advice/${getRandomNumber}`;
     fetch(adviceApi)
       .then((response) => response.json())
-      .then(({ slip }) => setData(slip));
+      .then(({ slip }) => {
+        if (!slip) {
+          setData({ id: 0, advice: "" })
+          return getAdvise()
+        }
+        setData(slip)
+      })
+      .catch(() => console.log("something went wrong"))
   }
 
   useEffect(() => {
