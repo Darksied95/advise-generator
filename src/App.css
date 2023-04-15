@@ -40,6 +40,7 @@ img {
   left: 40%;
   top: 90%;
   cursor: pointer;
+  user-select:none;
 }
 .dice-icon-container:hover {
   box-shadow: 5px 5px 18px hsl(150, 100%, 66%),
